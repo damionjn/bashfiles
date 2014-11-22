@@ -60,9 +60,6 @@
 [merge]
   log = true
 
-[push]
-  default = simple
-
 [rerere]
   enabled = 1
 
