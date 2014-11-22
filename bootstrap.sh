@@ -35,6 +35,7 @@ install() {
       cp -Rf "$file" "$HOME/$file"
     fi
   done
+  apt-get update -y && apt-get install -y tree vim
 }
 
 in_array() {
