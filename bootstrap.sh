@@ -53,7 +53,7 @@ in_array() {
 #-----------------------------------------------------------------------------
 
 backupdir="$HOME/.dotfiles-backup/$(date "+%Y%m%d%H%M.%S")"
-excluded=(. .. .git .gitignore .gitmodules bootstrap.sh Gemfile Gemfile.lock Rakefile README.md changelog.md)
+excluded=(. .. .git .gitignore .gitmodules bootstrap.sh Gemfile Gemfile.lock Rakefile README.md)
 
 
 #-----------------------------------------------------------------------------
@@ -63,12 +63,6 @@ excluded=(. .. .git .gitignore .gitmodules bootstrap.sh Gemfile Gemfile.lock Rak
 # Assumes $HOME/.dotfiles is *ours*
 if [ -d $HOME/.dotfiles ]; then
   pushd $HOME/.dotfiles
-
-  # Update Repo
-  notice "Updating"
-  git pull origin master
-  git submodule init
-  git submodule update
 
   # Backup
   notice "Backup up old files ($backupdir)"
