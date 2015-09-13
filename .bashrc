@@ -16,3 +16,4 @@ export LANG=en_US.UTF-8
 
 # Misc settings
 export EDITOR=vim
+export NODE_ENV=production
