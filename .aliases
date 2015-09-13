@@ -28,6 +28,7 @@ alias gz='tar -zcvf' # Zip it up
 alias cl='clear'
 
 #VIM
+alias v='vim'
 alias vi='vim'
 
 # Git
@@ -68,15 +69,3 @@ alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
 alias gclean='git reset --hard && git clean -dfx'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
-
-# Misc
-alias vu='vagrant up'
-alias vh='vagrant halt'
-alias vs='vagrant status'
-alias vsh='vagrant ssh'
-alias vr='vagrant reload'
-alias vrp='vagrant reload --provision'
-alias vp='vagrant provision'
-
-alias btd='boot2docker'
-alias dr='docker'
