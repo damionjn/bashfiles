@@ -7,13 +7,10 @@ colorscheme gruvbox
 " Change mapleader
 let mapleader=','
 
-" NeoVim
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-
 " Local dirs
-set backupdir=~/.nvim/backups
-set directory=~/.nvim/swaps
-set undodir=~/.nvim/undo
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+set undodir=~/.vim/undo
 
 " ------------------------------------------------------------------------------
 " Basic settings [[[
