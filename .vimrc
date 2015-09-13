@@ -11,7 +11,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'mrtazz/simplenote.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mxw/vim-jsx'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -340,20 +339,6 @@ augroup fugitive_config
   nnoremap <leader>gbl :Gblame<Space>
   nnoremap <leader>gp :! git push<CR>
   nnoremap <leader>gl :! git pull<CR>
-augroup END
-
-" Simplenote -------------------------------------------------------------------
-augroup simplenote_config
-  autocmd!
-  source ~/.simplenoterc
-  " Default to markdown
-  let g:SimplenoteFiletype = '.md'
-  " (,snl) to list notes, -u = update, -d = delete, -n = new, -t = tag
-  nnoremap <leader>snl :Simplenote -l<CR>
-  nnoremap <leader>snu :Simplenote -u<CR>
-  nnoremap <leader>snd :Simplenote -d<CR>
-  nnoremap <leader>snn :Simplenote -n<CR>
-  nnoremap <leader>snt :Simplenote -t<CR>
 augroup END
 
 " EasyAlign --------------------------------------------------------------------
