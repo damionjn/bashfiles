@@ -1,5 +1,6 @@
 Original Dotfiles
 ===
+
 Dotfiles for bash instead of zsh for easier portability and setup between linux boxes.  
 Based from: 
 [https://github.com/damionjn/dotfiles](https://github.com/damionjn/dotfiles) 
