@@ -7,15 +7,6 @@
 # Notice title
 notice() { echo  "\033[1;32m=> $1\033[0m"; }
 
-# Error title
-error() { echo "\033[1;31m=> Error: $1\033[0m"; }
-
-# List item
-c_list() { echo  "  \033[1;32m✔\033[0m $1"; }
-
-# Error list item
-e_list() { echo  "  \033[1;31m✖\033[0m $1"; }
-
 backup() {
   mkdir -p $backupdir
 
@@ -35,7 +26,7 @@ install() {
       cp -Rf "$file" "$HOME/$file"
     fi
   done
-  sudo apt-get install -y vim
+  sudo apt-get update; sudo apt-get install -yq tree git vim
 }
 
 in_array() {
@@ -52,7 +43,7 @@ in_array() {
 # Initialize
 #-----------------------------------------------------------------------------
 
-backupdir="$HOME/.dotfiles-backup/$(date "+%Y%m%d%H%M.%S")"
+backupdir="$HOME/.bashfiles-backup/$(date "+%Y%m%d%H%M.%S")"
 excluded=(. .. .git .gitignore .gitmodules bootstrap.sh Gemfile Gemfile.lock Rakefile README.md)
 
 
@@ -78,7 +69,7 @@ if [ -d $HOME/.dotfiles ]; then
 else
   # Clone Repo
   notice "Downloading"
-  git clone --recursive git://github.com/damionjn/bashfiles.git $HOME/.dotfiles
+  git clone --recursive git://github.com/damionvega/bashfiles.git $HOME/.bashfiles
 
   pushd $HOME/.dotfiles
 
