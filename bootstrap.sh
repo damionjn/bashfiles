@@ -26,7 +26,7 @@ install() {
       cp -Rf "$file" "$HOME/$file"
     fi
   done
-  sudo apt-get update; sudo apt-get install -yq tree git vim
+  sudo apt-get update; sudo apt-get install -yq tree git vim tmux
 }
 
 in_array() {
