@@ -5,7 +5,7 @@
 #-----------------------------------------------------------------------------
 
 # Notice title
-notice() { echo  "\033[1;32m=> $1\033[0m"; }
+notice() { printf "$1"; }
 
 backup() {
   mkdir -p $backupdir
@@ -52,15 +52,15 @@ excluded=(. .. .git .gitignore .gitmodules bootstrap.sh Gemfile Gemfile.lock Rak
 #-----------------------------------------------------------------------------
 
 # Assumes $HOME/.dotfiles is *ours*
-if [ -d $HOME/.dotfiles ]; then
-  pushd $HOME/.dotfiles
+if [ -d $HOME/.bashfiles ]; then
+  pushd $HOME/.bashfiles
 
   # Backup
-  notice "Backup up old files ($backupdir)"
+  notice "Backup up old files ($backupdir)...\n"
   backup
 
   # Install
-  notice "Installing"
+  notice "Installing...\n"
   install
 
   # Clean up z backups
@@ -68,17 +68,17 @@ if [ -d $HOME/.dotfiles ]; then
 
 else
   # Clone Repo
-  notice "Downloading"
+  notice "Downloading...\n"
   git clone --recursive git://github.com/damionvega/bashfiles.git $HOME/.bashfiles
 
   pushd $HOME/.dotfiles
 
   # Backup
-  notice "Backup up old files ($backupdir)"
+  notice "Backup up old files ($backupdir)...\n"
   backup
 
   # Install
-  notice "Installing"
+  notice "Installing...\n"
   install
 fi
 
@@ -88,6 +88,6 @@ fi
 #-----------------------------------------------------------------------------
 
 popd
-notice "Done"
+notice "\nFinished! The following packages have been installed: \n- tree\n- git\n- vim\n- tmux\n"
 exec $SHELL -l
 
