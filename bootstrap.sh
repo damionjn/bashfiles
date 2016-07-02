@@ -51,7 +51,7 @@ excluded=(. .. .git .gitignore .gitmodules bootstrap.sh Gemfile Gemfile.lock Rak
 # Install
 #-----------------------------------------------------------------------------
 
-# Assumes $HOME/.dotfiles is *ours*
+# Assumes $HOME/.bashfiles is *ours*
 if [ -d $HOME/.bashfiles ]; then
   pushd $HOME/.bashfiles
 
@@ -71,7 +71,7 @@ else
   notice "Downloading...\n"
   git clone --recursive git://github.com/damionvega/bashfiles.git $HOME/.bashfiles
 
-  pushd $HOME/.dotfiles
+  pushd $HOME/.bashfiles
 
   # Backup
   notice "Backup up old files ($backupdir)...\n"
